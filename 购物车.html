@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      li {
+        list-style: none;
+      }
+      .box {
+        width: 1000px;
+        height: 300px;
+      }
+      ul {
+        width: 1000px;
+        height: 250px;
+      }
+      li {
+        width: 200px;
+        height: 200px;
+
+        float: left;
+        margin: 20px 24px;
+      }
+      a {
+        display: block;
+        width: 200px;
+        height: 130px;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+      }
+      p {
+        font-size: 12px;
+        text-align: center;
+        line-height: 20px;
+      }
+      li p:nth-child(3) {
+        color: red;
+      }
+      #box1 {
+        width: 200px;
+        height: 50px;
+
+        position: absolute;
+        top: 170px;
+        left: 24px;
+      }
+      #box1 #btn {
+        width: 200px;
+        height: 50px;
+        background-color: orange;
+        opacity: 0;
+      }
+      ul #box1:hover #btn {
+        opacity: 1;
+      }
+
+      #box2 {
+        width: 200px;
+        height: 50px;
+
+        position: absolute;
+        top: 170px;
+        left: 272px;
+      }
+      #box2 #btn {
+        width: 200px;
+        height: 50px;
+        background-color: orange;
+        opacity: 0;
+      }
+      ul #box2:hover #btn {
+        opacity: 1;
+      }
+      #box3 {
+        width: 200px;
+        height: 50px;
+        position: absolute;
+        top: 170px;
+        left: 520px;
+      }
+      #box3 #btn {
+        width: 200px;
+        height: 50px;
+        background-color: orange;
+        opacity: 0;
+      }
+      ul #box3:hover #btn {
+        opacity: 1;
+      }
+      #box4 {
+        width: 200px;
+        height: 50px;
+        position: absolute;
+        top: 170px;
+        left: 768px;
+      }
+      #box4 #btn {
+        width: 200px;
+        height: 50px;
+        background-color: orange;
+        opacity: 0;
+      }
+      ul #box4:hover #btn {
+        opacity: 1;
+      }
+      .boxbox {
+        width: 1000px;
+        height: 450px;
+        /* background-color: red; */
+        border: 1px solid black;
+      }
+      .k1 {
+        width: 1000px;
+        height: 100px;
+        /* background-color: aqua; */
+        display: flex;
+      }
+      .k1 li {
+        width: 300px;
+        height: 100px;
+        display: flex;
+        justify-content: space-around;
+        padding-top: 15px;
+      }
+      .k2 {
+        width: 1000px;
+        height: 175px;
+        /* background-color: blue; */
+        /* border: 1px solid black; */
+      }
+
+      .k2 img {
+        width: 60px;
+        height: 70px;
+        margin-left: 50px;
+      }
+      .k2 p {
+        margin: -44px 0px 0px -503px;
+        font-size: 16px;
+      }
+      .k2 span {
+        margin: -21px 0px 0px 488px;
+        display: block;
+        color: red;
+      }
+      .k2 a {
+        margin: -22px 0px 0px 830px;
+      }
+
+      .k3 {
+        width: 1000px;
+        height: 175px;
+        /* background-color: pink; */
+      }
+
+      .k3 img {
+        width: 60px;
+        height: 75px;
+        margin-left: 50px;
+      }
+      .k3 p {
+        margin: -44px 0px 0px -448px;
+        font-size: 16px;
+      }
+      .k3 span {
+        margin: -21px 0px 0px 488px;
+        display: block;
+        color: red;
+      }
+      .k3 a {
+        margin: -22px 0px 0px 830px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <ul>
+        <li>
+          <a href="#"><img src="./img/q.png" alt="" /></a>
+          <p>小米移动电源10000mAh</p>
+          <p>79元</p>
+          <p>18万人评价</p>
+        </li>
+        <div id="box1">
+          <button id="btn">加入购物车</button>
+        </div>
+
+        <li>
+          <a href="#"><img src="./img/w.png" alt="" /></a>
+          <p>小米移动电源10000mAh高配版</p>
+          <p>79元</p>
+          <p>18万人评价</p>
+        </li>
+        <div id="box2">
+          <button id="btn">加入购物车</button>
+        </div>
+        <li>
+          <a href="#"><img src="./img/e.png" alt="" /></a>
+          <p>小米耳机</p>
+          <p>99元</p>
+          <p>4.2万人评价</p>
+        </li>
+        <div id="box3">
+          <button id="btn">加入购物车</button>
+        </div>
+        <li>
+          <a href="#"><img src="./img/r.png" alt="" /></a>
+          <p>小米耳机</p>
+          <p>29元</p>
+          <p>4.2万人评价</p>
+        </li>
+        <div id="box4">
+          <button id="btn">加入购物车</button>
+        </div>
+      </ul>
+    </div>
+    <div class="boxbox">
+      <ul class="k1">
+        <li>商品名称</li>
+        <li>单价</li>
+        <li>操作</li>
+      </ul>
+      <div class="k2">
+        <img src="./img/t.png" />
+        <p>小米移动电源10000mAh</p>
+        <span>79元</span>
+        <a>×</a>
+      </div>
+
+      <div class="k3">
+        <img src="./img/gh.png" />
+        <p>小米移动电源10000mAh 高配版</p>
+        <span>149元</span>
+        <a>×</a>
+      </div>
+    </div>
+    <script></script>
+  </body>
+</html>

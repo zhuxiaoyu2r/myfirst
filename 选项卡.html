@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      li {
+        list-style: none;
+      }
+      .box {
+        width: 450px;
+        height: 350px;
+        /* background-color: grey; */
+        margin: 0 auto;
+        overflow: hidden;
+        border: 1px solid black;
+      }
+      #box1 {
+        width: 290px;
+        height: 50px;
+        /* background-color: red; */
+        display: flex;
+        align-items: center;
+        margin-left: 100px;
+      }
+      #box1 li {
+        width: 40px;
+        height: 30px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding-left: 30px;
+        font-size: 14px;
+      }
+      #box1 li:hover {
+        color: red;
+      }
+      #up {
+        width: 400px;
+        height: 280px;
+        /* background-color: blue; */
+        float: left;
+        margin-left: 70px;
+        margin-top: 20px;
+      }
+
+      #up img {
+        width: 60px;
+        height: 60px;
+        float: left;
+      }
+      #up li {
+        width: 150px;
+        height: 120px;
+        /* background-color: brown; */
+        float: left;
+      }
+      #up li span {
+        float: left;
+        width: 70px;
+        height: 20px;
+        font-size: 12px;
+        padding-right: 40px;
+        /* background-color: aqua;   */
+      }
+      #up li p {
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div id="nav">
+        <ul id="box1">
+          <li>精选</li>
+          <li>美食</li>
+          <li>百货</li>
+          <li>个护</li>
+          <li>预告</li>
+        </ul>
+      </div>
+
+      <!-- <div id ="up">
+    <ul>
+    <li>
+  <img src="" alt="" style="background:red"/>
+   <p>【3盒95】仁和寡肽修护冻</p>
+   <p>￥38.99</p>
+   <span>一年最低价</span>
+   </li>
+    </ul>
+   </div>      -->
+
+      <div id="up">
+        <ul>
+          <li>
+            <img src="" alt="" style="background: red" />
+            <p>【3盒95】仁和寡肽修护冻</p>
+            <p>￥38.99</p>
+            <span>一年最低价</span>
+          </li>
+          <li>
+            <img src="" alt="" style="background: red" />
+            <p>贝壳莫克 金属手机支架桌</p>
+            <p>￥7.8</p>
+            <span>228天最低价</span>
+          </li>
+          <li>
+            <img src="" alt="" style="background: red" />
+            <p>男女同款 轻便舒适 时尚</p>
+            <p>￥68</p>
+            <span>一年最低价</span>
+          </li>
+          <li>
+            <img src="" alt="" style="background: red" />
+            <p>品牌秒杀时尚小西装女有套</p>
+            <p>￥87.6</p>
+            <span>一年最低价</span>
+          </li>
+        </ul>
+      </div>
+
+      <div id="up">
+        <ul>
+          <li>
+            <img src="" alt="" style="background: yellow" />
+            <p>【3盒95】仁和寡肽修护冻</p>
+            <p>￥38.99</p>
+            <span>一年最低价</span>
+          </li>
+          <li>
+            <img src="" alt="" style="background: yellow" />
+            <p>贝壳莫克 金属手机支架桌</p>
+            <p>￥7.8</p>
+            <span>228天最低价</span>
+          </li>
+          <li>
+            <img src="" alt="" style="background: yellow" />
+            <p>男女同款 轻便舒适 时尚</p>
+            <p>￥68</p>
+            <span>一年最低价</span>
+          </li>
+          <li>
+            <img src="" alt="" style="background: yellow" />
+            <p>品牌秒杀时尚小西装女有套</p>
+            <p>￥87.6</p>
+            <span>一年最低价</span>
+          </li>
+        </ul>
+      </div>
+
+      <div id="up">
+        <ul>
+          <li>
+            <img src="" alt="" style="background: blue" />
+            <p>【3盒95】仁和寡肽修护冻</p>
+            <p>￥38.99</p>
+            <span>一年最低价</span>
+          </li>
+          <li>
+            <img src="" alt="" style="background: blue" />
+            <p>贝壳莫克 金属手机支架桌</p>
+            <p>￥7.8</p>
+            <span>228天最低价</span>
+          </li>
+          <li>
+            <img src="" alt="" style="background: blue" />
+            <p>男女同款 轻便舒适 时尚</p>
+            <p>￥68</p>
+            <span>一年最低价</span>
+          </li>
+          <li>
+            <img src="" alt="" style="background: blue" />
+            <p>品牌秒杀时尚小西装女有套</p>
+            <p>￥87.6</p>
+            <span>一年最低价</span>
+          </li>
+        </ul>
+      </div>
+
+      <div id="up">
+        <ul>
+          <li>
+            <img src="" alt="" style="background: green" />
+            <p>【3盒95】仁和寡肽修护冻</p>
+            <p>￥38.99</p>
+            <span>一年最低价</span>
+          </li>
+          <li>
+            <img src="" alt="" style="background: green" />
+            <p>贝壳莫克 金属手机支架桌</p>
+            <p>￥7.8</p>
+            <span>228天最低价</span>
+          </li>
+          <li>
+            <img src="" alt="" style="background: green" />
+            <p>男女同款 轻便舒适 时尚</p>
+            <p>￥68</p>
+            <span>一年最低价</span>
+          </li>
+          <li>
+            <img src="" alt="" style="background: green" />
+            <p>品牌秒杀时尚小西装女有套</p>
+            <p>￥87.6</p>
+            <span>一年最低价</span>
+          </li>
+        </ul>
+      </div>
+
+      <div id="up">
+        <ul>
+          <li>
+            <img src="" alt="" style="background: pink" />
+            <p>【3盒95】仁和寡肽修护冻</p>
+            <p>￥38.99</p>
+            <span>一年最低价</span>
+          </li>
+          <li>
+            <img src="" alt="" style="background: pink" />
+            <p>贝壳莫克 金属手机支架桌</p>
+            <p>￥7.8</p>
+            <span>228天最低价</span>
+          </li>
+          <li>
+            <img src="" alt="" style="background: pink" />
+            <p>男女同款 轻便舒适 时尚</p>
+            <p>￥68</p>
+            <span>一年最低价</span>
+          </li>
+          <li>
+            <img src="" alt="" style="background: pink" />
+            <p>品牌秒杀时尚小西装女有套</p>
+            <p>￥87.6</p>
+            <span>一年最低价</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script>
+      var ups = document.querySelectorAll("#up");
+      var lis = document.querySelectorAll("#nav li");
+      lis.forEach(function (btn, i) {
+        btn.onclick = function () {
+          btn.style.color = "black";
+          lis.forEach(function (v) {
+            v.style.color = "black";
+            v.classList.add("nav");
+          });
+          btn.style.color = "red";
+          btn.classList.remove("nav");
+          console.log(i);
+          ups.forEach(function (v1) {
+            v1.style.display = "none";
+          });
+          ups[i].style.display = "block";
+        };
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .box {
+        width: 180px;
+        height: 270px;
+        background-color: grey;
+        margin: 0 auto;
+        padding-top: 10px;
+      }
+      .box1 {
+        width: 160px;
+        height: 260px;
+        background-color: #e83632;
+        margin: 0 auto;
+      }
+      .box1 h2 {
+        color: white;
+        padding: 33px 0px 0px 42px;
+      }
+      .box1 p {
+        color: #e87485;
+        margin: 9px 0px 0px 22px;
+      }
+      .box1 img {
+        margin: 10px 0px 0px 67px;
+      }
+      .box2 p {
+        font-size: 14px;
+        color: white;
+        margin-left: 35px;
+      }
+      #hSpan {
+        display: block;
+        width: 30px;
+        height: 30px;
+        background-color: #2f3430;
+        color: white;
+        float: left;
+        margin-left: 22px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        margin-top: 21px;
+      }
+      #mSpan {
+        display: block;
+        width: 30px;
+        height: 30px;
+        background-color: #2f3430;
+        color: white;
+        float: left;
+        margin-left: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        margin-top: 21px;
+      }
+      #sSpan {
+        display: block;
+        width: 30px;
+        height: 30px;
+        background-color: #2f3430;
+        color: white;
+        float: left;
+        margin-left: 13px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        margin-top: 21px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="box1">
+        <h2>倒计时</h2>
+        <p>COUNT DOWN</p>
+        <img src="./img/3.png" />
+        <div class="box2">
+          <p>距离结束还剩</p>
+        </div>
+        <span id="hSpan"></span><span id="mSpan"></span><span id="sSpan"></span>
+      </div>
+    </div>
+    <script>
+      var targetDate = new Date("2022-04-19 22:00:00");
+      setInterval(function () {
+        var now = new Date();
+        var temp = targetDate.getTime() - Date.now();
+
+        var totalSeconds = parseInt(temp / 1000);
+        console.log(totalSeconds % 60);
+        var sec = totalSeconds % 60;
+
+        var totalMins = parseInt(temp / 1000 / 60);
+        console.log(totalMins % 60);
+        var mins = totalMins % 60;
+
+        var totalHours = parseInt(temp / 1000 / 60 / 60);
+
+        var h = totalHours;
+        var m = mins;
+        var s = sec;
+        if (h < 10) {
+          h = "0" + h;
+        }
+        if (m < 10) {
+          m = "0" + m;
+        }
+        if (s < 10) {
+          s = "0" + s;
+        }
+        var str = totalHours + ":" + mins + ":" + sec;
+        console.log(str);
+        hSpan.innerHTML = h;
+        mSpan.innerHTML = m;
+        sSpan.innerHTML = s;
+      }, 1000);
+    </script>
+  </body>
+</html>

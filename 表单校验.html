@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 600px;
+        height: 450px;
+        background-color: grey;
+        margin: 0 auto;
+      }
+      .box p {
+        font-size: 14px;
+        color: #dfb40c;
+        padding: 10px 0px 0px 23px;
+      }
+      .box h4 {
+        margin-left: 60px;
+        margin-top: -5px;
+        color: #1395ca;
+      }
+      .box input {
+        margin-top: 20px;
+        margin-left: 40px;
+      }
+      .box span {
+        padding-left: 60px;
+      }
+      .box1 p {
+        font-size: 16px;
+        margin-left: 40px;
+        color: #1395ca;
+      }
+      #btn {
+        background-color: blue;
+        margin: 19px 0px 0px 264px;
+        width: 50px;
+        height: 30px;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <p>注意*为必填项</p>
+      <h4>账户详细资料</h4>
+      <span>用户名称*</span><input type="username" /><span>用户账号不合法</span
+      ><br />
+      <span>登陆密码*</span><input type="password" /><span
+        >密码必须是6~12位</span
+      ><br />
+      <span>重复登录密码*</span><input type="password" /><span
+        >两次密码输入不一致</span
+      ><br />
+      <div class="box1">
+        <p>个人信息资料</p>
+      </div>
+      <span>电子邮件*</span
+      ><input type="" placeholder="请输入您的电子邮箱" /><span
+        >邮箱输入不合法</span
+      ><br />
+      <span>真实姓名*</span><input type="" /><span></span><br />
+      <span>中奖通知手机*</span><input type="" /><span>手机号码输入不合法</span>
+      <button id="btn">注册</button>
+    </div>
+    <script>
+      var ipts = document.querySelectorAll("input");
+      console.log(ipts);
+      console.log(ipts[0]);
+
+      var isUserName = false;
+      ipts[0].onchange = function () {
+        var str = this.value;
+        console.log(str);
+        var reg = /^[0-9a-zA-Z\u2E80-\u9FFF]+$/;
+        if (reg.test(str) || this.value == "") {
+          this.nextElementSibling.innerHTML = "√";
+          this.nextElementSibling.style.color = "green";
+          isUserName = true;
+        } else {
+          this.nextElementSibling.innerHTML = "用户账户不合法";
+          this.nextElementSibling.style.color = "red";
+          isUserName = false;
+        }
+      };
+
+      var isLoginPassword = false;
+      ipts[1].onchange = function () {
+        var str = this.value;
+        console.log(str);
+        var reg = /^.{6,12}$/;
+        if (reg.test(str)) {
+          this.nextElementSibling.innerHTML = "√";
+          this.nextElementSibling.style.color = "green";
+          isLoginPassword = true;
+        } else {
+          this.nextElementSibling.innerHTML = "用户账户不合法";
+          this.nextElementSibling.style.color = "red";
+          isLoginPassword = false;
+        }
+      };
+
+      var isRepeatLoginPassword = false;
+      ipts[2].onchange = function () {
+        if (this.value == ipts[1].value) {
+          this.nextElementSibling.innerHTML = "√";
+          this.nextElementSibling.style.color = "green";
+          isRepeatLoginPassword = true;
+        } else {
+          this.nextElementSibling.innerHTML = "两次密码输入不一致";
+          this.nextElementSibling.style.color = "red";
+          isRepeatLoginPassword = false;
+        }
+      };
+
+      var isEMail = false;
+      ipts[3].onchange = function () {
+        var str = this.str;
+        console.log(str);
+        var reg = /^\w+[-+.]*\w*@([a-z0-0-9A-Z\u2E80-\u9FFF]-?)+(\. \w{2,6})+/;
+        if (reg.test(str)) {
+          this.nextElementSibling.innerHTML = "√";
+          this.nextElementSibling.style.color = "green";
+          isEMail = true;
+        } else {
+          this.nextElementSibling.innerHTML = "用户账户不合法";
+          this.nextElementSibling.style.color = "red";
+          isEMail = false;
+        }
+      };
+
+      var isActualName = false;
+      ipts[4].onchange = function () {
+        var str = this.str;
+        console.log(str);
+        var reg = /^([\u4e00-\u9fa5]{1,20}|[a-zA-Z\.\s]{1,20})$/;
+        if (reg.test(str)) {
+          this.nextElementSibling.innerHTML = "√";
+          this.nextElementSibling.style.color = "green";
+          isActualName = true;
+        } else {
+          this.nextElementSibling.innerHTML = "请输入真实姓名";
+          this.nextElementSibling.style.color = "red";
+          isActualName = false;
+        }
+      };
+
+      var isMobilePhone = false;
+      ipts[5].onchange = function () {
+        var str = this.str;
+        console.log(str);
+        var reg = /^[3,9]\d{9}$/;
+        if (reg.test(str)) {
+          this.nextElementSibling.innerHTML = "√";
+          this.nextElementSibling.style.color = "green";
+          isMobilePhone = true;
+        } else {
+          this.nextElementSibling.innerHTML = "手机号码输入不合法";
+          this.nextElementSibling.style.color = "red";
+          isMobilePhone = false;
+        }
+      };
+
+      var btn = document.querySelector("#btn");
+      btn.onclick = function (evt) {
+        if (isUserName) {
+          console.log("输入框的格式正确");
+        } else {
+          console.log("输入的格式错误");
+        }
+      };
+    </script>
+  </body>
+</html>
